@@ -1,0 +1,20 @@
+{
+  "name": "BarInventoryServer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "barCustomer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoeWrightNC/BarInventoryServer.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JoeWrightNC/BarInventoryServer/issues"
+  },
+  "homepage": "https://github.com/JoeWrightNC/BarInventoryServer#readme"
+}
