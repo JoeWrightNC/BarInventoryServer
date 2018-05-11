@@ -4,8 +4,8 @@
 
 This is a CLI application built with Node.js and MySQL that mimicks the architecture of a bar Point of Sale system.  Consequently, this app has two modules:
 
-* **Customer Module** - Allows for potential customers to view products for sale and associated prices, select a product to purchase, and then be billed their total amount due for the purcahse.
-* **Manager Module** - Allows manager to view currently inventory, recieve low inventory warnings, update exisiting stock levels upon purchase, and add new item to the store inventory.
+* **Customer Module** - Allows for potential customers to view products for sale and associated prices, select a product to purchase, and then be billed their total amount due for the purchase.
+* **Manager Module** - Allows manager to view currently inventory, recieve low inventory warnings, update exisiting stock levels upon purchase, and add new items to the store inventory.
 
 ## Getting Started
 
@@ -13,7 +13,9 @@ Follow these instructions to clone the project and run this CLI on your local dr
 
 ### Prerequisites
 
-You will need [Node.JS](https://www.npmjs.com/) installed on your system.
+*  You will need [Node.JS](https://www.npmjs.com/) installed on your system.
+*  You will need the ability to establish a MySQL database on your machine using a localhost.  I recommend Sequel Pro for this.
+
 
 ### Installing
 
@@ -24,6 +26,10 @@ You will need [Node.JS](https://www.npmjs.com/) installed on your system.
 2. To install the various dependencies for this project run the following command inside the root directory of the cloned filed in your terminal/bash:
 
         `npm install`
+
+3. Initial the MySQL database utilizing the following file from the directory:
+
+        `seeds.sql`
 
 ## Commands to run application
 
