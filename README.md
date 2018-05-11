@@ -50,8 +50,8 @@ You will need [Node.JS](https://www.npmjs.com/) installed on your system.
 
 # Demo
 
-  ![Customer Demo](https://youtu.be/MwTwY7-IbmE) 
-  ![Manager Demo](https://youtu.be/ZmSQRwAKQno)
+  [Customer Demo](https://youtu.be/MwTwY7-IbmE) 
+  [Manager Demo](https://youtu.be/ZmSQRwAKQno)
 
 # Packages Used
 
