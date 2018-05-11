@@ -21,17 +21,17 @@ Follow these instructions to clone the project and run this CLI on your local dr
 
 1. Clone project by running the following command in your terminal/bash: 
 
-        `git clone https://github.com/ricopella/bamazon.git`
+        `git clone git@github.com:JoeWrightNC/BarInventoryServer.git`
 
 2. To install the various dependencies for this project run the following command inside the root directory of the cloned filed in your terminal/bash:
 
         `npm install`
 
-3. Initial the MySQL database utilizing the following file from the directory:
+3. Initialize the MySQL database utilizing the following file from the directory:
 
         `seeds.sql`
 
-## Commands to run application
+## Running The Application
 
 1. `node barCustomer.js`
 
