@@ -19,9 +19,9 @@ function startUp() {
 
 function showItems() {
   console.log("Your current inventory is: \n")
-  const query = connection.query("SELECT * FROM inventory", function (err, response) {
+  const query = connection.query("SELECT * FROM inventory", function (err, res) {
     if (err) throw err;
-    response.forEach(item => {
+    res.forEach(item => {
       console.log(`ID: ${item.id} || Item: ${item.itemName} || Price: $${item.price}`)
     })
     updateInventory()
@@ -33,24 +33,10 @@ function updateInventory() {
     name: "getID",
     type: "input",
     message: "Enter the ID of the item you'd like to purchase:",
-    /* validate: function(input) {
-      if(Number.isInteger(input)){
-      return true
-     }else{
-      console.log("Please enter a positive integer.")
-      return false;
-     }} */
   } , {
     name: "quantityPurchased",
     type: "input",
     message: "How many would you like to purchase?",
-    /* validate: function(input) {
-      if (Number.isInteger(input)){
-      return true
-     }else{
-      console.log("Please enter a positive integer.")
-      return false;
-     }}  */
     }
 ]).then(function(answers) {
   const itemID = answers.getID
@@ -65,7 +51,8 @@ function updateInventory() {
       const itemDataPacket = data[0]
       if (quantity <= itemDataPacket.stockQuantity) {
         console.log("I have enough to get you that!  Just one second.")
-        const updateInventoryDBQuery = "UPDATE inventory SET stockQuantity = " + (itemDataPacket.stockQuantity - quantity) + " WHERE id = " + itemID;
+        const newQuantityBuyer = itemDataPacket.stockQuantity - quantity
+        const updateInventoryDBQuery = "UPDATE inventory SET stockQuantity = " + newQuantityBuyer+ " WHERE id = " + itemID;
         connection.query(updateInventoryDBQuery, function(err, data) {
           if (err) throw err;
           console.log("Here are your drinks! Your total is $" + (itemDataPacket.price * quantity) + ". Enjoy your drinks!!");
